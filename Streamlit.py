@@ -1,5 +1,6 @@
 import streamlit as st
-from Prediction import Prediction
+import os
+from alzhy_predict import Prediction
 
 # Set page configuration
 st.set_page_config(
@@ -52,17 +53,22 @@ if __name__ == "__main__":
             """)
 
     # Prediction pages
-    elif app_mode == "Alzheimer's":
-        Prediction("Alzheimer's Disease")
+    else:
+        model_folder = "Models"
+        model_file = None
 
-    elif app_mode == "Heart Disease":
-        Prediction("Heart Disease")
+        if app_mode == "Alzheimer's":
+            model_file = os.path.join(model_folder, "alzhy_model.pkl")
+        elif app_mode == "Heart Disease":
+            model_file = os.path.join(model_folder, "heart_model.pkl")
+        elif app_mode == "Diabetes":
+            model_file = os.path.join(model_folder, "diab_model.pkl")
+        elif app_mode == "Breast Cancer":
+            model_file = os.path.join(model_folder, "breastcancer_model.pkl")
+        elif app_mode == "Epilepsy":
+            model_file = os.path.join(model_folder, "epilp_model.pkl")
 
-    elif app_mode == "Diabetes":
-        Prediction("Diabetes")
-
-    elif app_mode == "Breast Cancer":
-        Prediction("Breast Cancer")
-
-    elif app_mode == "Epilepsy":
-        Prediction("Epilepsy")
+        if model_file is not None and os.path.exists(model_file):
+            Prediction(app_mode, model_file)
+        else:
+            st.error("Model file not found for selected condition.")
