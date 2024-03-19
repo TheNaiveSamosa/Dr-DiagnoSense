@@ -1,9 +1,11 @@
-# DoctorBot
+# Dr DiagnoSense
 
-Welcome to DoctorBot, your personal health assistant powered by machine learning!
+Welcome to Dr DiagnoSense, your personal health assistant powered by machine learning!
 
 ## About
-DoctorBot is an innovative project created by Aditya Khamitkar in collaboration with Intel and the Government of India, specifically the National e-Governance Division (NEGD) under the Ministry of Electronics and Information Technology, as part of the Intel AI4Youth program. The aim of DoctorBot is to leverage machine learning (ML) techniques to detect and provide insights on various health conditions including Alzheimer's disease, heart diseases, diabetes, epilepsy, and more. Our ultimate goal is to create a Language Learning Model (LLM) that users can interact with to discuss their health concerns. DoctorBot will analyze symptoms, provide probable causes of the condition, and even suggest medications, all free of cost.
+Dr DiagnoSense is a derivative project inspired by Aditya Khamitkar's original creation, DoctorBot. While DoctorBot was directly developed in collaboration with Intel and the Government of India, Dr DiagnoSense inherits the spirit of leveraging machine learning techniques to provide health insights. The aim remains consistent: to offer a language-based health assistant that analyzes symptoms, provides probable causes of conditions, and suggests medications, all free of cost.
+
+Dr DiagnoSense aims to leverage machine learning (ML) techniques to detect and provide insights on various health conditions including Alzheimer's disease, heart diseases, diabetes, epilepsy, and more. Our ultimate goal is to create a Language Learning Model (LLM) that users can interact with to discuss their health concerns. Dr DiagnoSense will analyze symptoms, provide probable causes of the condition, and even suggest medications, all free of cost.
 
 ## Disease Prediction
 - **Alzheimer's Disease**: Utilizes cognitive assessment data and neuroimaging techniques to detect early signs of Alzheimer's.
@@ -13,15 +15,15 @@ DoctorBot is an innovative project created by Aditya Khamitkar in collaboration 
 
 ## How to Use
 1. **Install Dependencies**: Make sure you have all the necessary dependencies installed. See the `requirements.txt` file for details.
-2. **Run DoctorBot**: Execute the main script to start interacting with DoctorBot.
-3. **Discuss Your Health**: Type in your symptoms or health concerns to start a conversation with DoctorBot.
-4. **Receive Insights**: DoctorBot will analyze your inputs and provide insights on potential health conditions and medications.
+2. **Run Dr DiagnoSense**: Execute the main script to start interacting with Dr DiagnoSense.
+3. **Discuss Your Health**: Type in your symptoms or health concerns to start a conversation with Dr DiagnoSense.
+4. **Receive Insights**: Dr DiagnoSense will analyze your inputs and provide insights on potential health conditions and medications.
 
 ## Contributing
-We welcome contributions from the community to improve DoctorBot's accuracy and features. Feel free to fork this repository, make improvements, and submit a pull request.
+We welcome contributions from the community to improve Dr DiagnoSense's accuracy and features. Feel free to fork this repository, make improvements, and submit a pull request.
 
 ## Disclaimer
-DoctorBot is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+Dr DiagnoSense is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
 
 ## License
 This project is licensed under the [Apache License 2.0](LICENSE).
