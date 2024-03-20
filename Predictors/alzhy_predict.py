@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import streamlit as st
 import joblib
+import os
 
 # Constants for Categories
 ETHNICITY_OPTIONS = {'Hisp/Latino': 0, 'Not Hisp/Latino': 1, 'Unknown': 2}
@@ -9,7 +10,7 @@ IMPTED_CATEGORIES = ['True', 'False']
 PTRACCAT_CATEGORIES = ['Asian', 'Black', 'White']
 PTGENDER_CATEGORIES = ['Female', 'Male']
 APOE_CATEGORIES = ['2,2', '2,3', '2,4', '3,3', '3,4', '4,4']
-MODEL_FILE_PATH = 'model/alzheimer_model.pkl'
+MODEL_FILE_PATH = 'C:/Users/Chimni/Projects and Coding/Version Control Systems/Dr-DiagnoSense/Models/alzheimer_model.pkl'
 
 class Conditions:
     AD = "AD"
@@ -92,3 +93,4 @@ def prediction_page():
         st.write(f"**{predicted_condition[0]}** ({abbreviation[predicted_condition[0]]})")
         st.subheader("Condition Description:")
         st.write(condition_description[predicted_condition[0]])
+
