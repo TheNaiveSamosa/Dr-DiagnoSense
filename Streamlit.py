@@ -1,6 +1,7 @@
 import streamlit as st
 import os
-from alzhy_predict import Prediction
+from Predictors.alzhy_predict import Prediction
+
 
 # Set page configuration
 st.set_page_config(
