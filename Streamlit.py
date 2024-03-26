@@ -1,7 +1,7 @@
 import streamlit as st
 import os
-from Predictors.alzhy_predict import Prediction
-
+from Predictors.breast_cancer import create_flask_app
+from Predictors.alzhy_predict import prediction_page
 
 # Set page configuration
 st.set_page_config(
@@ -55,21 +55,18 @@ if __name__ == "__main__":
 
     # Prediction pages
     else:
-        model_folder = "Models"
-        model_file = None
+        model_folder = "Models"  # Change this to the appropriate folder for model files
 
+        # Load the appropriate model and run the prediction
         if app_mode == "Alzheimer's":
             model_file = os.path.join(model_folder, "alzhy_model.pkl")
-        elif app_mode == "Heart Disease":
-            model_file = os.path.join(model_folder, "heart_model.pkl")
-        elif app_mode == "Diabetes":
-            model_file = os.path.join(model_folder, "diab_model.pkl")
+            if model_file is not None and os.path.exists(model_file):
+                Prediction(app_mode, model_file)
+            else:
+                st.error("Model file not found for Alzheimer's condition.")
         elif app_mode == "Breast Cancer":
-            model_file = os.path.join(model_folder, "breastcancer_model.pkl")
-        elif app_mode == "Epilepsy":
-            model_file = os.path.join(model_folder, "epilp_model.pkl")
-
-        if model_file is not None and os.path.exists(model_file):
-            Prediction(app_mode, model_file)
+            # Run the Flask app for breast cancer prediction
+            app = create_flask_app()
+            app.run(debug=False)
         else:
-            st.error("Model file not found for selected condition.")
+            st.error("Model not implemented for selected condition.")
