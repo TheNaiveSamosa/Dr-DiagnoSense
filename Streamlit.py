@@ -61,7 +61,7 @@ if __name__ == "__main__":
         if app_mode == "Alzheimer's":
             model_file = os.path.join(model_folder, "alzhy_model.pkl")
             if model_file is not None and os.path.exists(model_file):
-                Prediction(app_mode, model_file)
+                prediction_page(app_mode, model_file)
             else:
                 st.error("Model file not found for Alzheimer's condition.")
         elif app_mode == "Breast Cancer":
